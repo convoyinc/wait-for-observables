@@ -1,0 +1,17 @@
+# MacOS
+**/.DS_Store
+
+# Node
+/node_modules/
+yarn.lock
+npm-shrinkwrap.json
+package-lock.json
+
+# Build Artifacts
+/output/
+*.d.ts
+*.js
+!/scripts/*.js
+
+# TypeScript
+!/typings/**/*.d.ts
