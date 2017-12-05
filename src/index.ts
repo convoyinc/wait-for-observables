@@ -8,9 +8,7 @@ export type ObservableResult = { values: any[] } | { error: any };
  * Returns any errors encountered, as well as values (as an array of results from `next`),
  * in the same order as the observables were given.
  */
-export function waitFor(
-  ...observables: Observable[]
-): Promise<ObservableResult[]> {
+export default function waitForObservables(...observables: Observable[]): Promise<ObservableResult[]> {
   return new Promise(resolve => {
     if (!observables.length) {
       throw new Error(`waitFor must be given at least one observable`);
